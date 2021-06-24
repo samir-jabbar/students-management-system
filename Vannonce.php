@@ -82,7 +82,7 @@
                     height: 200px;</style> -->
                     <table border="0" align="center">
                     <tr><th colspan="3">Annonces</th></tr>
-					<?php 
+					          <?php 
                     $cards_color = array('secondary','danger', 'warning' ,'info', 'dark');
                     $count=0;
                     for($i=0;$i<$l;$i++){

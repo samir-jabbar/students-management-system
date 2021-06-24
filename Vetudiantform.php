@@ -77,7 +77,7 @@
 																echo "<option>".$cls[$i]['nom_classe']."</option>";
 															}
 														?>
-													  </select>
+													</select>
 												</div>
 											</div>
 

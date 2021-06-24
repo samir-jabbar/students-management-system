@@ -154,7 +154,7 @@ $query1="UPDATE users_al_khawarizmi SET E_mail=\"$info[4]\",nom=\"$info[1]\",pre
             $query->execute();}
 
         if($v==2 or $v=='2'){
-                        print_r($info[3]);
+        print_r($info[3]);
 
 $query1="UPDATE users_al_khawarizmi SET E_mail=\"$info[4]\",nom=\"$info[1]\", prenom=\"$info[0]\", Genre = \"$info[2]\", num=$info[5],adr=\"$info[6]\"";
             $image=",photo_personnel=\"$info[7]\"";$fonction=",fonction=\"$info[3]\"";$where=" where id_usr=$id";
@@ -172,6 +172,20 @@ $query1="UPDATE users_al_khawarizmi SET E_mail=\"$info[4]\",nom=\"$info[1]\", pr
     public function UserDelete($id){
         $query=$this->db->prepare("delete from users_Al_Khawarizmi where id_usr=$id");
         $query->execute();
+    }
+    public function Addnote($info){
+        $query=$this->db->prepare('insert into notes(id_cls,chemin) values(?,?)');
+        $query->execute($info);
+    }
+    public function noteInfo($id_cls){
+        $query=$this->db->prepare("select chemin from edt where id_cls=?");
+        $query->execute($id_cls);
+        return $query->fetch();
+    }
+    public function moduleduprof($id){
+        $query=$this->db->prepare("select * from module where id_usr=?");
+        $query->execute($id);
+        return $query->fetchall();
     }
 }
 
