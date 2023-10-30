@@ -43,7 +43,7 @@ Ensure that you have a working web server environment with PHP support for succe
 
 The system is designed to be user-friendly and intuitive. Teachers, administrators, and school staff can use it to manage student-related tasks efficiently. Please refer to the provided HTML and PHP files for specific functionalities and interfaces.
 
-## Selling to Schools
+## BENIFITS to Schools
 
 **Are you an educational institution looking for an efficient student management solution?**
 
